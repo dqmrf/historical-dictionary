@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :admin_users
+  devise_for :users, class_name: 'AdminUser', path: :auth
 
-  devise_scope :admin_user do
-    authenticated :admin_user do
+  devise_scope :user do
+    authenticated do
       use_doorkeeper
       root 'doorkeeper/applications#index'
     end
