@@ -10,7 +10,8 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.7'
 gem 'rack-cors'
 gem 'bcrypt', '~> 3.1.7'
-gem 'uglifier'
+gem 'uglifier', '>= 1.3.0'
+gem 'sass-rails', '~> 5.0'
 gem 'active_model_serializers'
 # TODO: find out whether i need this gem or not
 gem 'decent_exposure', '~> 3.0.0'
@@ -38,6 +39,7 @@ group :development, :test do
   gem 'foreman'
   gem 'pry-rails'
   gem 'letter_opener'
+  gem 'selenium-webdriver'
 end
 
 group :test do
