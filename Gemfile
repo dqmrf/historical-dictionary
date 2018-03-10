@@ -15,6 +15,7 @@ gem 'active_model_serializers'
 # TODO: find out whether i need this gem or not
 gem 'decent_exposure', '~> 3.0.0'
 gem 'doorkeeper'
+gem 'devise'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
