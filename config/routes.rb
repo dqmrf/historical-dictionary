@@ -13,6 +13,12 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :api do
+    namespace :v1 do
+      resources :tests, only: [:index]
+    end
+  end
+
   ### DO NOT PUT ROUTES BELOW HERE
   # the path below will catch everything and return 404s
   match '*path(.:format)' => 'errors#not_found',
