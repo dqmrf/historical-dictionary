@@ -1,4 +1,4 @@
-class ErrorsController < ApplicationController
+class ErrorsController < BaseController
   skip_before_action :authenticate_user!
 
   def not_found
