@@ -36,5 +36,11 @@ module HistoricalDictionary
       g.view_specs      false
       g.helper_specs    false
     end
+
+    # Overriding doorkeepers' layouts
+    config.to_prepare do
+      # Only Applications list
+      Doorkeeper::ApplicationsController.layout "application"
+    end
   end
 end
