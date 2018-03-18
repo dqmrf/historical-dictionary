@@ -23,7 +23,8 @@ Rails.application.routes.draw do
 
   ### DO NOT PUT ROUTES BELOW HERE
   # the path below will catch everything and return 404s
-  match '*path(.:format)' => 'errors#not_found',
-        via: [:get, :post, :put, :patch, :delete],
-        constraints: -> (req) { req.format.html? }
+  match '*unmatched_route',
+        via: :all,
+        to: 'application#raise_not_found',
+        format: false
 end
