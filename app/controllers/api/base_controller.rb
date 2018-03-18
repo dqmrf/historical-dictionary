@@ -1,6 +1,8 @@
 class Api::BaseController < ApplicationController
   protect_from_forgery with: :null_session
 
+  helper_method :current_user
+
   def doorkeeper_unauthorized_render_options(error: nil)
     { json: { error: (error.try(:description) || I18n.t('auth.error.not_authorized')) } }
   end
@@ -12,13 +14,7 @@ class Api::BaseController < ApplicationController
 
   protected
 
-  def current_resource_owner
-    @current_user ||= User.find(doorkeeper_token.resource_owner_id) if doorkeeper_token
-  end
-
   def current_user
-    current_resource_owner || super
-  rescue ActiveRecord::RecordNotFound
-    nil
+    current_client_user
   end
 end
