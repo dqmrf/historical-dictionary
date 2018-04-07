@@ -71,7 +71,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address: 'smtp.mailgun.org',
     port: 587,
-    domain: 'sandboxf3ff5cdc3414403b8f2ee54281f1f77f.mailgun.org',
+    domain: Figaro.env.mailgun_domain,
     authentication: 'plain',
     enable_starttls_auto: true,
     user_name: Figaro.env.mailgun_username,
