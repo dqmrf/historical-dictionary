@@ -20,6 +20,7 @@ gem 'active_model_serializers'
 gem 'decent_exposure', '~> 3.0.0'
 gem 'doorkeeper'
 gem 'devise'
+gem 'figaro'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
