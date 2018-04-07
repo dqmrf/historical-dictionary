@@ -42,7 +42,6 @@ group :development, :test do
   gem 'foreman'
   gem 'pry-rails'
   gem 'letter_opener'
-  gem 'selenium-webdriver'
   gem 'dotenv-rails'
 end
 
