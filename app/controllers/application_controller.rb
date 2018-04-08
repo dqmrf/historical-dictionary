@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
+  helper_method :current_server_user
   helper_method :current_client_user
 
   rescue_from ActiveRecord::RecordNotFound, with: :not_found!
@@ -33,6 +34,10 @@ class ApplicationController < ActionController::Base
         render "errors/#{code}", status: code
       end
     end
+  end
+
+  def current_server_user
+    current_user
   end
 
   def current_client_user

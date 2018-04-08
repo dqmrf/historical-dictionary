@@ -3,9 +3,9 @@ Rails.application.routes.draw do
     controllers :applications => 'oauth/applications'
   end
 
-  devise_for :server_users, class_name: :ServerUser, path: :auth
+  devise_for :users, class_name: :ServerUser, path: :auth
 
-  devise_scope :server_user do
+  devise_scope :user do
     authenticated do
       root 'doorkeeper/applications#index'
     end

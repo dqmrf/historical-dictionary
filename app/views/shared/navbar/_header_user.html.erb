@@ -1,0 +1,7 @@
+<ul class="navbar-nav">
+  <%= nav_item t('doorkeeper.layouts.admin.nav.home'), root_path %>
+  <%= nav_item t('doorkeeper.layouts.admin.nav.applications'), oauth_applications_path %>
+</ul>
+<ul class="navbar-nav ml-md-auto">
+  <%= nav_item t('navbar.sign_out'), destroy_user_session_path, method: :delete %>
+</ul>
