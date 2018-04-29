@@ -17,7 +17,13 @@
     </header>
 
     <div class="container">
-      <%= yield %>
+
+      <%= render 'shared/flash_messages' %>
+
+      <div class="site-content">
+        <%= yield %>
+      </div>
+
     </div>
 
   </body>
