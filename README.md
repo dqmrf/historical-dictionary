@@ -1,6 +1,6 @@
 # Historical Dictionary
 Historical dictionary application built using Ruby on Rails.
 
-## TODO
-* Create `error` layout, etc.
-* Create navigation for backend
+
+## Notes
+* Test redirect URI for doorkeeper application: `urn:ietf:wg:oauth:2.0:oob`
